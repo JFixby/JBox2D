@@ -25,8 +25,6 @@ package org.jbox2d.d.dynamics.contacts;
 
 import org.jbox2d.d.common.Vector2;
 
-import com.jfixby.cmns.api.log.L;
-
 public class Velocity {
 	public final Vector2 v = new Vector2();
 	private double omega;

@@ -32,13 +32,11 @@ import org.jbox2d.d.common.Timer;
 import org.jbox2d.d.common.Vector2;
 import org.jbox2d.d.dynamics.contacts.Contact;
 import org.jbox2d.d.dynamics.contacts.ContactSolver;
+import org.jbox2d.d.dynamics.contacts.ContactSolver.ContactSolverDef;
 import org.jbox2d.d.dynamics.contacts.ContactVelocityConstraint;
 import org.jbox2d.d.dynamics.contacts.Position;
 import org.jbox2d.d.dynamics.contacts.Velocity;
-import org.jbox2d.d.dynamics.contacts.ContactSolver.ContactSolverDef;
 import org.jbox2d.d.dynamics.joints.Joint;
-
-import com.jfixby.cmns.api.log.L;
 
 /*
  Position Correction Notes

@@ -35,8 +35,6 @@ import org.jbox2d.d.dynamics.contacts.Contact;
 import org.jbox2d.d.dynamics.contacts.ContactEdge;
 import org.jbox2d.d.dynamics.joints.JointEdge;
 
-import com.jfixby.cmns.api.log.L;
-
 /**
  * A rigid body. These are created via World.createBody.
  * 
