@@ -32,10 +32,10 @@ import org.jbox2d.f.common.Timer;
 import org.jbox2d.f.common.Vector2;
 import org.jbox2d.f.dynamics.contacts.Contact;
 import org.jbox2d.f.dynamics.contacts.ContactSolver;
+import org.jbox2d.f.dynamics.contacts.ContactSolver.ContactSolverDef;
 import org.jbox2d.f.dynamics.contacts.ContactVelocityConstraint;
 import org.jbox2d.f.dynamics.contacts.Position;
 import org.jbox2d.f.dynamics.contacts.Velocity;
-import org.jbox2d.f.dynamics.contacts.ContactSolver.ContactSolverDef;
 import org.jbox2d.f.dynamics.joints.Joint;
 
 /*

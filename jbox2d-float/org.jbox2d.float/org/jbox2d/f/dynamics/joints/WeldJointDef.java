@@ -25,8 +25,6 @@ package org.jbox2d.f.dynamics.joints;
 
 import org.jbox2d.f.common.Vector2;
 import org.jbox2d.f.dynamics.Body;
-import org.jbox2d.f.dynamics.joints.JointDef;
-import org.jbox2d.f.dynamics.joints.JointType;
 
 /**
  * Created at 3:38:52 AM Jan 15, 2011
