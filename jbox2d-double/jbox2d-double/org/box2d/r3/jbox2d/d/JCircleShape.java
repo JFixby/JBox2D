@@ -37,7 +37,7 @@ public class JCircleShape extends JShape implements CircleShape {
 	@Override
 	public FixedFloat2 getPosition() {
 		final Vector2 p = gdx_shape.getVertex(0);
-		position.set(p.x, p.y);
+		position.setXY(p.x, p.y);
 		return position;
 	}
 

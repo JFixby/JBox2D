@@ -66,7 +66,7 @@ public class JPolygonShape extends JShape implements PolygonShape {
 		chain.setSize(N);
 		for (int i = 0; i < N; i++) {
 			final Vector2 vx = this.gdx_shape.getVertex(i);
-			chain.getVertex(i).relative().set(vx.x, vx.y);
+			chain.getVertex(i).relative().setXY(vx.x, vx.y);
 		}
 		return chain;
 	}

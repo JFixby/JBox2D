@@ -24,8 +24,8 @@ public class JPoint2D extends RedPoint implements Float2 {
 	}
 
 	@Override
-	public JPoint2D set(double x, double y) {
-		super.set(x, y);
+	public JPoint2D setXY(double x, double y) {
+		super.setXY(x, y);
 		return update();
 	}
 

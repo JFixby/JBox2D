@@ -34,7 +34,7 @@ public class JTransform implements Box2DTransform {
 		// L.d("tmpV", tmpV);
 		// L.d("tmpO", tmpO);
 
-		temp.set(tmpO.x, tmpO.y);
+		temp.setXY(tmpO.x, tmpO.y);
 
 		//
 		// double x = gdx_transform.vals[POS_X] + gdx_transform.vals[COS]

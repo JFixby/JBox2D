@@ -65,7 +65,7 @@ public class JBox2DBody implements Box2DBody {
 	@Override
 	public Float2 getPosition() {
 		final Vector2 p = this.gdx_body.getPosition();
-		position.set(p.x, p.y);
+		position.setXY(p.x, p.y);
 		return position;
 	}
 
@@ -77,7 +77,7 @@ public class JBox2DBody implements Box2DBody {
 	@Override
 	public Float2 getLinearVelocity() {
 		final Vector2 p = this.gdx_body.getLinearVelocity();
-		velocity.set(p.x, p.y);
+		velocity.setXY(p.x, p.y);
 		return velocity;
 	}
 
@@ -90,7 +90,7 @@ public class JBox2DBody implements Box2DBody {
 	@Override
 	public Float2 getWorldCenter() {
 		final Vector2 p = this.gdx_body.getWorldCenter();
-		center.set(p.x, p.y);
+		center.setXY(p.x, p.y);
 		return center;
 	}
 
