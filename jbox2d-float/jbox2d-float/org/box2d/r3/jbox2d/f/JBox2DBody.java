@@ -23,7 +23,6 @@ public class JBox2DBody implements Box2DBody {
 	private Float2 velocity = Geometry.newFloat2();
 	private Float2 center = Geometry.newFloat2();
 	private Vector2 tmp2 = new Vector2();
-	private Vec3 tmp3 = new Vec3();
 
 	public JBox2DBody(org.jbox2d.f.dynamics.Body createBody) {
 		this.gdx_body = createBody;

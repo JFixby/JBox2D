@@ -6,7 +6,6 @@ import org.box2d.jfixby.api.Box2DTransform;
 import org.box2d.jfixby.api.Fixture;
 import org.box2d.jfixby.api.FixtureDef;
 import org.box2d.jfixby.api.MassData;
-import org.jbox2d.d.common.Vec3;
 import org.jbox2d.d.common.Vector2;
 
 import com.jfixby.cmns.api.collections.Collection;
@@ -23,7 +22,6 @@ public class JBox2DBody implements Box2DBody {
 	private Float2 velocity = Geometry.newFloat2();
 	private Float2 center = Geometry.newFloat2();
 	private Vector2 tmp2 = new Vector2();
-	private Vec3 tmp3 = new Vec3();
 
 	public JBox2DBody(org.jbox2d.d.dynamics.Body createBody) {
 		this.gdx_body = createBody;
@@ -32,24 +30,24 @@ public class JBox2DBody implements Box2DBody {
 
 	@Override
 	public void setLinearVelocity(double vx, double vy) {
-		// gdx_body.setLinearVelocity( vx,  vy);
-		tmp2.set( vx,  vy);
+		// gdx_body.setLinearVelocity( vx, vy);
+		tmp2.set(vx, vy);
 		gdx_body.setLinearVelocity(tmp2);
 	}
 
 	@Override
 	public void setTransform(double x, double y, double radians) {
-		tmp2.set( x,  y);
-		gdx_body.setTransform(tmp2,  radians);
+		tmp2.set(x, y);
+		gdx_body.setTransform(tmp2, radians);
 
 	}
 
 	@Override
 	public void applyForceToCenter(double forceX, double forceY, boolean wake) {
-		tmp2.set( forceX,  forceY);
+		tmp2.set(forceX, forceY);
 		gdx_body.applyForceToCenter(tmp2);
 
-		// gdx_body.applyForceToCenter( forceX,  forceY, wake);
+		// gdx_body.applyForceToCenter( forceX, forceY, wake);
 	}
 
 	@Override
@@ -96,8 +94,8 @@ public class JBox2DBody implements Box2DBody {
 
 	@Override
 	public void setTransform(Float2 worldCenter, double angle) {
-		tmp2.set( worldCenter.getX(),  worldCenter.getY());
-		this.gdx_body.setTransform(tmp2,  angle);
+		tmp2.set(worldCenter.getX(), worldCenter.getY());
+		this.gdx_body.setTransform(tmp2, angle);
 	}
 
 	@Override

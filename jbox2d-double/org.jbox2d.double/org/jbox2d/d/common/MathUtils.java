@@ -53,7 +53,7 @@ import com.jfixby.cmns.api.math.FloatMath;
 /**
  * A few math methods that don't fit very well anywhere else.
  */
-public class MathUtils extends PlatformMathUtils {
+public class MathUtils {
 	public static final double PI = Math.PI;
 	public static final double TWOPI = (Math.PI * 2);
 	public static final double INV_PI = 1f / PI;
