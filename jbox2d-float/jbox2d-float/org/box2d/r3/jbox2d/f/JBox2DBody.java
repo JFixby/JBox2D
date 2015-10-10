@@ -6,7 +6,6 @@ import org.box2d.jfixby.api.Box2DTransform;
 import org.box2d.jfixby.api.Fixture;
 import org.box2d.jfixby.api.FixtureDef;
 import org.box2d.jfixby.api.MassData;
-import org.jbox2d.f.common.Vec3;
 import org.jbox2d.f.common.Vector2;
 
 import com.jfixby.cmns.api.collections.Collection;
