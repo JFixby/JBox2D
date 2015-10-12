@@ -10,7 +10,7 @@ import org.jbox2d.f.dynamics.Body;
 
 import com.jfixby.cmns.api.collections.JUtils;
 import com.jfixby.cmns.api.collections.List;
-import com.jfixby.cmns.api.geometry.Float2;
+import com.jfixby.cmns.api.floatn.Float2;
 
 public class JWorld implements Box2DWorld {
 

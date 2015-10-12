@@ -3,7 +3,7 @@ package org.box2d.r3.jbox2d.f;
 import org.box2d.jfixby.api.BodyDef;
 import org.box2d.jfixby.api.BodyType;
 
-import com.jfixby.cmns.api.geometry.Float2;
+import com.jfixby.cmns.api.floatn.Float2;
 
 public class JBodyDef implements BodyDef {
 

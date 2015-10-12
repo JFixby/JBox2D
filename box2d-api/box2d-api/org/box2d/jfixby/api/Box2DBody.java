@@ -1,7 +1,7 @@
 package org.box2d.jfixby.api;
 
 import com.jfixby.cmns.api.collections.Collection;
-import com.jfixby.cmns.api.geometry.Float2;
+import com.jfixby.cmns.api.floatn.Float2;
 
 public interface Box2DBody {
 
