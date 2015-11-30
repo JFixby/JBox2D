@@ -46,7 +46,7 @@ class PlatformMathUtils {
 		// y = (y - y * y) * 0.33971f;
 		// return Float.intBitsToFloat((int) ((b + 127 - y) * SHIFT23));
 
-		return (float) FloatMath.pow(a, b);
+		return (float) FloatMath.power(a, b);
 
 	}
 }

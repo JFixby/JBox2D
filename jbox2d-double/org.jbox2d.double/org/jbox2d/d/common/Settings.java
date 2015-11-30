@@ -34,7 +34,7 @@ public class Settings {
 	public static final double SCALABILITY = 1.5;
 
 	public static final double LEGACY_EPSILON = 1.1920928955078125E-7d;
-	public static final double EPSILON = FloatMath.pow(LEGACY_EPSILON,
+	public static final double EPSILON = FloatMath.power(LEGACY_EPSILON,
 			SCALABILITY);
 
 	public static final double G = 1;
@@ -56,11 +56,11 @@ public class Settings {
 	 * is chosen to be numerically significant, but visually insignificant.
 	 */
 	// public static double linearSlop = legacylinearSlop;
-	public static double linearSlop_legacy = FloatMath.pow(0.005f, SCALABILITY);
+	public static double linearSlop_legacy = FloatMath.power(0.005f, SCALABILITY);
 	public static double linearSlop_collision = linearSlop_legacy;
 	public static double linearSlop_constraint = linearSlop_legacy;
 
-	public static double k_errorTol = FloatMath.pow(1e-3f, SCALABILITY);;
+	public static double k_errorTol = FloatMath.power(1e-3f, SCALABILITY);;
 
 	/**
 	 * The radius of the polygon/edge shape skin. This should not be modified.

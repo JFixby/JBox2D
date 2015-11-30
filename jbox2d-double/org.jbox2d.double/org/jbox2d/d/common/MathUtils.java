@@ -190,7 +190,7 @@ public class MathUtils {
 	}
 
 	public static final double pow(double a, double b) {
-		return FloatMath.pow(a, b);
+		return FloatMath.power(a, b);
 	}
 
 	public static final double atan2(final double y, final double x) {
