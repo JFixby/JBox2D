@@ -9,7 +9,7 @@ import org.box2d.jfixby.api.MassData;
 import org.jbox2d.d.common.Vector2;
 
 import com.jfixby.cmns.api.collections.Collection;
-import com.jfixby.cmns.api.collections.JUtils;
+import com.jfixby.cmns.api.collections.Collections;
 import com.jfixby.cmns.api.collections.List;
 import com.jfixby.cmns.api.floatn.Float2;
 import com.jfixby.cmns.api.geometry.Geometry;
@@ -119,7 +119,7 @@ public class JBox2DBody implements Box2DBody {
 	public Collection<Fixture> getFixtureList() {
 		org.jbox2d.d.dynamics.Fixture fixtures = this.gdx_body.getFixtureList();
 
-		List<Fixture> fixs = JUtils.newList();
+		List<Fixture> fixs = Collections.newList();
 		while (fixtures != null) {
 			JFixture F = new JFixture(fixtures);
 			fixs.add(F);

@@ -8,7 +8,7 @@ import org.box2d.jfixby.api.ContactListener;
 import org.jbox2d.d.common.Vector2;
 import org.jbox2d.d.dynamics.Body;
 
-import com.jfixby.cmns.api.collections.JUtils;
+import com.jfixby.cmns.api.collections.Collections;
 import com.jfixby.cmns.api.collections.List;
 import com.jfixby.cmns.api.floatn.Float2;
 
@@ -63,7 +63,7 @@ public class JWorld implements Box2DWorld {
 	public List<Box2DBody> listBodies() {
 
 		Body bodies = this.gdx_world.getBodyList();
-		List<Box2DBody> list = JUtils.newList();
+		List<Box2DBody> list = Collections.newList();
 		while (bodies != null) {
 			JBox2DBody body = new JBox2DBody(bodies);
 			list.add(body);
