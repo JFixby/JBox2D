@@ -8,9 +8,9 @@ import org.box2d.jfixby.api.ContactListener;
 import org.jbox2d.d.common.Vector2;
 import org.jbox2d.d.dynamics.Body;
 
+import com.jfixby.cmns.api.collections.JUtils;
 import com.jfixby.cmns.api.collections.List;
 import com.jfixby.cmns.api.floatn.Float2;
-import com.jfixby.cmns.api.util.JUtils;
 
 public class JWorld implements Box2DWorld {
 

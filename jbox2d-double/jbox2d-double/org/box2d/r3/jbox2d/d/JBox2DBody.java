@@ -9,10 +9,10 @@ import org.box2d.jfixby.api.MassData;
 import org.jbox2d.d.common.Vector2;
 
 import com.jfixby.cmns.api.collections.Collection;
+import com.jfixby.cmns.api.collections.JUtils;
 import com.jfixby.cmns.api.collections.List;
 import com.jfixby.cmns.api.floatn.Float2;
 import com.jfixby.cmns.api.geometry.Geometry;
-import com.jfixby.cmns.api.util.JUtils;
 
 public class JBox2DBody implements Box2DBody {
 
