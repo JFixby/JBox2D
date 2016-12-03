@@ -1,3 +1,4 @@
+
 package org.box2d.r3.jbox2d.d;
 
 import org.box2d.jfixby.api.BodyType;
@@ -11,117 +12,119 @@ import org.jbox2d.d.common.Vector2;
 import com.jfixby.cmns.api.collections.Collection;
 import com.jfixby.cmns.api.collections.Collections;
 import com.jfixby.cmns.api.collections.List;
+import com.jfixby.cmns.api.err.Err;
 import com.jfixby.cmns.api.floatn.Float2;
 import com.jfixby.cmns.api.geometry.Geometry;
 
 public class JBox2DBody implements Box2DBody {
 
-	private org.jbox2d.d.dynamics.Body gdx_body;
-	private JMassData mass_data;
-	private Float2 position = Geometry.newFloat2();
-	private Float2 velocity = Geometry.newFloat2();
-	private Float2 center = Geometry.newFloat2();
-	private Vector2 tmp2 = new Vector2();
+	private final org.jbox2d.d.dynamics.Body gdx_body;
+	private final JMassData mass_data;
+	private final Float2 position = Geometry.newFloat2();
+	private final Float2 velocity = Geometry.newFloat2();
+	private final Float2 center = Geometry.newFloat2();
+	private final Vector2 tmp2 = new Vector2();
 
-	public JBox2DBody(org.jbox2d.d.dynamics.Body createBody) {
+	public JBox2DBody (final org.jbox2d.d.dynamics.Body createBody) {
 		this.gdx_body = createBody;
-		this.mass_data = new JMassData(gdx_body);
+		this.mass_data = new JMassData(this.gdx_body);
 	}
 
 	@Override
-	public void setLinearVelocity(double vx, double vy) {
+	public void setLinearVelocity (final double vx, final double vy) {
 		// gdx_body.setLinearVelocity( vx, vy);
-		tmp2.set(vx, vy);
-		gdx_body.setLinearVelocity(tmp2);
+		this.tmp2.set(vx, vy);
+		this.gdx_body.setLinearVelocity(this.tmp2);
 	}
 
 	@Override
-	public void setTransform(double x, double y, double radians) {
-		tmp2.set(x, y);
-		gdx_body.setTransform(tmp2, radians);
+	public void setTransform (final double x, final double y, final double radians) {
+		this.tmp2.set(x, y);
+		this.gdx_body.setTransform(this.tmp2, radians);
 
 	}
 
 	@Override
-	public void applyForceToCenter(double forceX, double forceY, boolean wake) {
-		tmp2.set(forceX, forceY);
-		gdx_body.applyForceToCenter(tmp2);
+	public void applyForceToCenter (final double forceX, final double forceY, final boolean wake) {
+		this.tmp2.set(forceX, forceY);
+		this.gdx_body.applyForceToCenter(this.tmp2);
 
 		// gdx_body.applyForceToCenter( forceX, forceY, wake);
 	}
 
 	@Override
-	public MassData getMassData() {
+	public MassData getMassData () {
 		return this.mass_data;
 	}
 
 	@Override
-	public void setMassData(MassData mass_data) {
+	public void setMassData (final MassData mass_data) {
 		this.mass_data.set(mass_data);
 	}
 
 	@Override
-	public Float2 getPosition() {
+	public Float2 getPosition () {
 		final Vector2 p = this.gdx_body.getPosition();
-		position.setXY(p.x, p.y);
-		return position;
+		this.position.setXY(p.x, p.y);
+		return this.position;
 	}
 
 	@Override
-	public double getAngle() {
+	public double getAngle () {
 		return this.gdx_body.getAngle();
 	}
 
 	@Override
-	public Float2 getLinearVelocity() {
+	public Float2 getLinearVelocity () {
 		final Vector2 p = this.gdx_body.getLinearVelocity();
-		velocity.setXY(p.x, p.y);
-		return velocity;
+		this.velocity.setXY(p.x, p.y);
+		return this.velocity;
 	}
 
 	@Override
-	public void createFixture(FixtureDef fixture) {
-		final JFixtureDef def = (JFixtureDef) fixture;
+	public void createFixture (final FixtureDef fixture) {
+		final JFixtureDef def = (JFixtureDef)fixture;
 		this.gdx_body.createFixture(def.getGdxFixture());
 	}
 
 	@Override
-	public Float2 getWorldCenter() {
+	public Float2 getWorldCenter () {
 		final Vector2 p = this.gdx_body.getWorldCenter();
-		center.setXY(p.x, p.y);
-		return center;
+		this.center.setXY(p.x, p.y);
+		return this.center;
 	}
 
 	@Override
-	public void setTransform(Float2 worldCenter, double angle) {
-		tmp2.set(worldCenter.getX(), worldCenter.getY());
-		this.gdx_body.setTransform(tmp2, angle);
+	public void setTransform (final Float2 worldCenter, final double angle) {
+		this.tmp2.set(worldCenter.getX(), worldCenter.getY());
+		this.gdx_body.setTransform(this.tmp2, angle);
 	}
 
 	@Override
-	public Float2 getLocalPoint(Float2 anchorA) {
-		throw new Error();
+	public Float2 getLocalPoint (final Float2 anchorA) {
+		Err.reportNotImplementedYet();
+		return anchorA;
 	}
 
 	@Override
-	public boolean isActive() {
+	public boolean isActive () {
 		return this.gdx_body.isActive();
 	}
 
 	@Override
-	public Box2DTransform getTransform() {
-		org.jbox2d.d.common.Transform transform = this.gdx_body.getTransform();
-		JTransform gdx_transform = new JTransform(transform);
+	public Box2DTransform getTransform () {
+		final org.jbox2d.d.common.Transform transform = this.gdx_body.getTransform();
+		final JTransform gdx_transform = new JTransform(transform);
 		return gdx_transform;
 	}
 
 	@Override
-	public Collection<Fixture> getFixtureList() {
+	public Collection<Fixture> getFixtureList () {
 		org.jbox2d.d.dynamics.Fixture fixtures = this.gdx_body.getFixtureList();
 
-		List<Fixture> fixs = Collections.newList();
+		final List<Fixture> fixs = Collections.newList();
 		while (fixtures != null) {
-			JFixture F = new JFixture(fixtures);
+			final JFixture F = new JFixture(fixtures);
 			fixs.add(F);
 			fixtures = fixtures.getNext();
 		}
@@ -130,7 +133,7 @@ public class JBox2DBody implements Box2DBody {
 	}
 
 	@Override
-	public BodyType getType() {
+	public BodyType getType () {
 		final org.jbox2d.d.dynamics.BodyType T = this.gdx_body.getType();
 		if (T == org.jbox2d.d.dynamics.BodyType.DYNAMIC) {
 			return BodyType.DynamicBody;
@@ -141,17 +144,18 @@ public class JBox2DBody implements Box2DBody {
 		if (T == org.jbox2d.d.dynamics.BodyType.STATIC) {
 			return BodyType.StaticBody;
 		}
-		throw new Error();
+		Err.reportError("fail");
+		return null;
 
 	}
 
 	@Override
-	public boolean isAwake() {
+	public boolean isAwake () {
 		return this.gdx_body.isAwake();
 	}
 
-	public org.jbox2d.d.dynamics.Body getGdxBody() {
-		return gdx_body;
+	public org.jbox2d.d.dynamics.Body getGdxBody () {
+		return this.gdx_body;
 	}
 
 }

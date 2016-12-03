@@ -1,8 +1,10 @@
+
 package org.box2d.r3.jbox2d.d;
 
 import org.box2d.jfixby.api.Box2DTransform;
 import org.jbox2d.d.common.Vector2;
 
+import com.jfixby.cmns.api.err.Err;
 import com.jfixby.cmns.api.floatn.Float2;
 
 public class JTransform implements Box2DTransform {
@@ -14,27 +16,27 @@ public class JTransform implements Box2DTransform {
 
 	org.jbox2d.d.common.Transform gdx_transform;
 
-	public JTransform(org.jbox2d.d.common.Transform gdx_transform) {
+	public JTransform (final org.jbox2d.d.common.Transform gdx_transform) {
 		this.gdx_transform = gdx_transform;
 	}
 
 	@Override
-	public String toString() {
-		return "GdxTransform [gdx_transform=" + gdx_transform + "]";
+	public String toString () {
+		return "GdxTransform [gdx_transform=" + this.gdx_transform + "]";
 	}
 
 	final Vector2 tmpV = new Vector2();
 	final Vector2 tmpO = new Vector2();
 
 	@Override
-	public void transform(Float2 temp) {
-		tmpV.set( temp.getX(),  temp.getY());
-		org.jbox2d.d.common.Transform.mulToOut(gdx_transform, tmpV, tmpO);
+	public void transform (final Float2 temp) {
+		this.tmpV.set(temp.getX(), temp.getY());
+		org.jbox2d.d.common.Transform.mulToOut(this.gdx_transform, this.tmpV, this.tmpO);
 		// L.d("gdx_transform", gdx_transform);
 		// L.d("tmpV", tmpV);
 		// L.d("tmpO", tmpO);
 
-		temp.setXY(tmpO.x, tmpO.y);
+		temp.setXY(this.tmpO.x, this.tmpO.y);
 
 		//
 		// double x = gdx_transform.vals[POS_X] + gdx_transform.vals[COS]
@@ -46,8 +48,8 @@ public class JTransform implements Box2DTransform {
 	}
 
 	@Override
-	public void reverse(Float2 temp_point) {
-		throw new Error("Not supported!");
+	public void reverse (final Float2 temp_point) {
+		Err.reportError("Not supported!");
 	}
 
 }

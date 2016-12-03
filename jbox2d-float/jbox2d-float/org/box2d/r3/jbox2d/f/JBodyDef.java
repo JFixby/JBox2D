@@ -1,32 +1,34 @@
+
 package org.box2d.r3.jbox2d.f;
 
 import org.box2d.jfixby.api.BodyDef;
 import org.box2d.jfixby.api.BodyType;
 
+import com.jfixby.cmns.api.err.Err;
 import com.jfixby.cmns.api.floatn.Float2;
 
 public class JBodyDef implements BodyDef {
 
-	private JPoint2D position;
+	private final JPoint2D position;
 
-	public JBodyDef() {
-		gdx_bodydef = new org.jbox2d.f.dynamics.BodyDef();
-		position = new JPoint2D(gdx_bodydef.position);
+	public JBodyDef () {
+		this.gdx_bodydef = new org.jbox2d.f.dynamics.BodyDef();
+		this.position = new JPoint2D(this.gdx_bodydef.position);
 	}
 
 	private final org.jbox2d.f.dynamics.BodyDef gdx_bodydef;
 
 	@Override
-	public Float2 position() {
-		return position;
+	public Float2 position () {
+		return this.position;
 	}
 
 	@Override
-	public void setType(BodyType type) {
-		gdx_bodydef.type = resolve(type);
+	public void setType (final BodyType type) {
+		this.gdx_bodydef.type = this.resolve(type);
 	}
 
-	private org.jbox2d.f.dynamics.BodyType resolve(BodyType type) {
+	private org.jbox2d.f.dynamics.BodyType resolve (final BodyType type) {
 		if (type == BodyType.DynamicBody) {
 			return org.jbox2d.f.dynamics.BodyType.DYNAMIC;
 		}
@@ -36,11 +38,12 @@ public class JBodyDef implements BodyDef {
 		if (type == BodyType.StaticBody) {
 			return org.jbox2d.f.dynamics.BodyType.STATIC;
 		}
-		throw new Error();
+		Err.reportError("exit");
+		return null;
 
 	}
 
-	public org.jbox2d.f.dynamics.BodyDef getGdxBodyDef() {
-		return gdx_bodydef;
+	public org.jbox2d.f.dynamics.BodyDef getGdxBodyDef () {
+		return this.gdx_bodydef;
 	}
 }
