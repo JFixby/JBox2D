@@ -102,7 +102,7 @@ public class JBox2DBody implements Box2DBody {
 
 	@Override
 	public Float2 getLocalPoint (final Float2 anchorA) {
-		Err.reportNotImplementedYet();
+		Err.throwNotImplementedYet();
 		return anchorA;
 	}
 
@@ -144,7 +144,7 @@ public class JBox2DBody implements Box2DBody {
 		if (T == org.jbox2d.f.dynamics.BodyType.STATIC) {
 			return BodyType.StaticBody;
 		}
-		Err.reportNotImplementedYet();
+		Err.throwNotImplementedYet();
 		return null;
 
 	}

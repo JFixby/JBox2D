@@ -38,7 +38,7 @@ public class JBodyDef implements BodyDef {
 		if (type == BodyType.StaticBody) {
 			return org.jbox2d.d.dynamics.BodyType.STATIC;
 		}
-		Err.reportNotImplementedYet();
+		Err.throwNotImplementedYet();
 		return null;
 
 	}

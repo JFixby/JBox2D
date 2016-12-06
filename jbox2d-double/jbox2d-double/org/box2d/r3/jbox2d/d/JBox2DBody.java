@@ -102,7 +102,7 @@ public class JBox2DBody implements Box2DBody {
 
 	@Override
 	public Float2 getLocalPoint (final Float2 anchorA) {
-		Err.reportNotImplementedYet();
+		Err.throwNotImplementedYet();
 		return anchorA;
 	}
 

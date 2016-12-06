@@ -24,7 +24,7 @@ public class JFixture implements Fixture {
 
 	@Override
 	public Box2DBody getBody () {
-		Err.reportNotImplementedYet();
+		Err.throwNotImplementedYet();
 		return null;
 	}
 
@@ -44,7 +44,7 @@ public class JFixture implements Fixture {
 			return ShapeType.Chain;
 		}
 
-		Err.reportNotImplementedYet();
+		Err.throwNotImplementedYet();
 		return null;
 	}
 
