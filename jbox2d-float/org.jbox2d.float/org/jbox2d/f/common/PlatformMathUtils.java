@@ -23,7 +23,7 @@
  ******************************************************************************/
 package org.jbox2d.f.common;
 
-import com.jfixby.cmns.api.math.FloatMath;
+import com.jfixby.scarabei.api.math.FloatMath;
 
 /**
  * Contains methods from MathUtils that rely on JVM features. These are

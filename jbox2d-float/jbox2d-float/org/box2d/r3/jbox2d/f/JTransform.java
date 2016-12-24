@@ -4,8 +4,8 @@ package org.box2d.r3.jbox2d.f;
 import org.box2d.jfixby.api.Box2DTransform;
 import org.jbox2d.f.common.Vector2;
 
-import com.jfixby.cmns.api.err.Err;
-import com.jfixby.cmns.api.floatn.Float2;
+import com.jfixby.scarabei.api.err.Err;
+import com.jfixby.scarabei.api.floatn.Float2;
 
 public class JTransform implements Box2DTransform {
 

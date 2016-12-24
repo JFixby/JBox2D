@@ -6,8 +6,8 @@ import org.box2d.jfixby.api.Fixture;
 import org.box2d.jfixby.api.Shape;
 import org.box2d.jfixby.api.ShapeType;
 
-import com.jfixby.cmns.api.err.Err;
-import com.jfixby.cmns.api.log.L;
+import com.jfixby.scarabei.api.err.Err;
+import com.jfixby.scarabei.api.log.L;
 
 public class JFixture implements Fixture {
 

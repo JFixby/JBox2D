@@ -2,9 +2,9 @@ package org.box2d.r3.jbox2d.d;
 
 import org.jbox2d.d.common.Vector2;
 
-import com.jfixby.cmns.api.floatn.FixedFloat2;
-import com.jfixby.cmns.api.floatn.Float2;
-import com.jfixby.red.geometry.RedPoint;
+import com.jfixby.scarabei.api.floatn.FixedFloat2;
+import com.jfixby.scarabei.api.floatn.Float2;
+import com.jfixby.scarabei.red.geometry.RedPoint;
 
 public class JPoint2D extends RedPoint implements Float2 {
 	final private Vector2 gdx_vector;

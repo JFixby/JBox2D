@@ -2,7 +2,7 @@ package org.box2d.r3.jbox2d.d;
 
 import org.box2d.jfixby.api.Box2DWorldSpecs;
 
-import com.jfixby.cmns.api.floatn.Float2;
+import com.jfixby.scarabei.api.floatn.Float2;
 
 public class JWorldSpecs implements Box2DWorldSpecs {
 

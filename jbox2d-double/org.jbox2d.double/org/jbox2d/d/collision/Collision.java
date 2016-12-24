@@ -37,7 +37,7 @@ import org.jbox2d.d.common.Transform;
 import org.jbox2d.d.common.Vector2;
 import org.jbox2d.d.pooling.IWorldPool;
 
-import com.jfixby.cmns.api.err.Err;
+import com.jfixby.scarabei.api.err.Err;
 
 /** Functions used for computing contact points, distance queries, and TOI queries. Collision methods are non-static for pooling
  * speed, retrieve a collision object from the {@link SingletonPool}. Should not be finalructed.

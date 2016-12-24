@@ -48,7 +48,7 @@ package org.jbox2d.d.common;
 
 import java.util.Random;
 
-import com.jfixby.cmns.api.math.FloatMath;
+import com.jfixby.scarabei.api.math.FloatMath;
 
 /**
  * A few math methods that don't fit very well anywhere else.

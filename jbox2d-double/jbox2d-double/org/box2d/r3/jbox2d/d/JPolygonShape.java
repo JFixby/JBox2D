@@ -3,10 +3,10 @@ package org.box2d.r3.jbox2d.d;
 import org.box2d.jfixby.api.PolygonShape;
 import org.jbox2d.d.common.Vector2;
 
-import com.jfixby.cmns.api.collections.Collection;
-import com.jfixby.cmns.api.floatn.Float2;
-import com.jfixby.cmns.api.geometry.ClosedPolygonalChain;
-import com.jfixby.cmns.api.geometry.Geometry;
+import com.jfixby.scarabei.api.collections.Collection;
+import com.jfixby.scarabei.api.floatn.Float2;
+import com.jfixby.scarabei.api.geometry.ClosedPolygonalChain;
+import com.jfixby.scarabei.api.geometry.Geometry;
 
 public class JPolygonShape extends JShape implements PolygonShape {
 

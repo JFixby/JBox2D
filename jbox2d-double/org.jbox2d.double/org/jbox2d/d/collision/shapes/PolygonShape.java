@@ -35,8 +35,8 @@ import org.jbox2d.d.common.Vector2;
 import org.jbox2d.d.pooling.arrays.IntArray;
 import org.jbox2d.d.pooling.arrays.Vec2Array;
 
-import com.jfixby.cmns.api.err.Err;
-import com.jfixby.cmns.api.log.L;
+import com.jfixby.scarabei.api.err.Err;
+import com.jfixby.scarabei.api.log.L;
 
 /** A convex polygon shape. Polygons have a maximum number of vertices equal to _maxPolygonVertices. In most cases you should not
  * need many vertices for a convex polygon. */

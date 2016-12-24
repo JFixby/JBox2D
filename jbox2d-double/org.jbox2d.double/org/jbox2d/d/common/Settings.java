@@ -23,7 +23,7 @@
  ******************************************************************************/
 package org.jbox2d.d.common;
 
-import com.jfixby.cmns.api.math.FloatMath;
+import com.jfixby.scarabei.api.math.FloatMath;
 
 /**
  * Global tuning constants based on MKS units and various integer maximums
