@@ -3,7 +3,7 @@ package org.box2d.r3.jbox2d.d;
 import org.box2d.jfixby.api.CircleShape;
 import org.jbox2d.d.common.Vector2;
 
-import com.jfixby.scarabei.api.floatn.FixedFloat2;
+import com.jfixby.scarabei.api.floatn.ReadOnlyFloat2;
 import com.jfixby.scarabei.api.floatn.Float2;
 import com.jfixby.scarabei.api.geometry.Geometry;
 import com.jfixby.scarabei.api.log.L;
@@ -35,7 +35,7 @@ public class JCircleShape extends JShape implements CircleShape {
 	}
 
 	@Override
-	public FixedFloat2 getPosition() {
+	public ReadOnlyFloat2 getPosition() {
 		final Vector2 p = gdx_shape.getVertex(0);
 		position.setXY(p.x, p.y);
 		return position;

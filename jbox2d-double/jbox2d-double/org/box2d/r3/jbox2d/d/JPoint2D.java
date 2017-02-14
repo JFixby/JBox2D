@@ -2,7 +2,7 @@ package org.box2d.r3.jbox2d.d;
 
 import org.jbox2d.d.common.Vector2;
 
-import com.jfixby.scarabei.api.floatn.FixedFloat2;
+import com.jfixby.scarabei.api.floatn.ReadOnlyFloat2;
 import com.jfixby.scarabei.api.floatn.Float2;
 import com.jfixby.scarabei.red.geometry.RedPoint;
 
@@ -42,7 +42,7 @@ public class JPoint2D extends RedPoint implements Float2 {
 	}
 
 	@Override
-	public JPoint2D set(FixedFloat2 other) {
+	public JPoint2D set(ReadOnlyFloat2 other) {
 		super.set(other);
 		return update();
 	}
@@ -54,7 +54,7 @@ public class JPoint2D extends RedPoint implements Float2 {
 	}
 
 	@Override
-	public JPoint2D add(FixedFloat2 offset) {
+	public JPoint2D add(ReadOnlyFloat2 offset) {
 		super.add(offset);
 		return update();
 	}
