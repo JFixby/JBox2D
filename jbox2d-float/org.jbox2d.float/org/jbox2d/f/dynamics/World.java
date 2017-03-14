@@ -1706,7 +1706,7 @@ public class World {
    * DestroyParticleInShape(Shape&, Transform&,bool).
    * 
    * @param Shape which encloses particles that should be destroyed.
-   * @param Transform applied to the shape.
+   * @param Transform2D applied to the shape.
    * @warning This function is locked during callbacks.
    * @return Number of particles destroyed.
    */
@@ -1720,7 +1720,7 @@ public class World {
    * defers the destruction until the next simulation step.
    * 
    * @param Shape which encloses particles that should be destroyed.
-   * @param Transform applied to the shape.
+   * @param Transform2D applied to the shape.
    * @param Whether to call the world b2DestructionListener for each particle destroyed.
    * @warning This function is locked during callbacks.
    * @return Number of particles destroyed.
